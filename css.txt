@@ -1,0 +1,59 @@
+/* Custom Customizations & Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+
+/* Glassmorphism panel effect */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+}
+
+.dark .glass-panel {
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(8px);
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #view-staff-payslips,
+    #view-staff-payslips * {
+        visibility: visible;
+    }
+
+    #view-staff-payslips {
+        position: absolute;
+        inset: 0;
+        padding: 0;
+    }
+
+    #view-staff-payslips button {
+        display: none;
+    }
+
+    .dark .glass-panel {
+        background: white;
+    }
+}
